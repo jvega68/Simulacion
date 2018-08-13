@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+<html>
+    <head>
+      <title>Tarea 5 de Regresi&oacute;n</title>
+      <meta http-equiv="Content-Type"
+            content="text/html;charset=iso-8859-1" >
+      <link rel="stylesheet" type="text/css" href="../classes.css" >
+      <style type="text/css"></style>
+</head>
+
+
+
+<body>
+Estas son las actividades que espero realicen el d&iacute;a de hoy.
+<ol>
+<li><p>Los datos en el archivo <a class="onsite" href="data/forwards.txt">forwards.txt</a> son datos en bruto sobre operaciones forward. Hay que convertir estos datos a una tabla de contingencia, organizadas por instituci&oacute;n y tipo de operaci&oacute;n. Se requiere poner etiquetas a las columnas y dividir los campos que son de longitud fija. Esto se hace con las siguientes instrucciones</p>
+<p><tt>nombres.campos <- c("inst","tipo.inst","cont","nom.cont","tipo.cont","f.con","f.ven","plazo","oper",
+  "mnt.base","mda.mnt.base","precio","mda.precio","tipo.suby","tipo.liq")</tt></p>  <p><tt>base<-read.fwf(file=direccion_de_tu archivo,widths=c(6,3,6,50,3,10,10,5,1,20,2,15,2,3,1),col.names=nombres.campos)</tt></p></li>
+<p>En esta parte revisaremos el uso de los comandos <tt>xtabs,ftable</tt> y <tt>tapply</tt>.</p>
+<li>
+<p>Los datos en el archivo <a class="onsite" href="data/mbtied.txt">mbtied.txt</a> tiene las frecuencias de tipos de personalidad por nivel de educaci&oacute;n y sexo. Los niveles de educaci&oacute;n son D para dropout, HS para High School, y C para College. El objetivo es determinar las relaciones entre GenderEd y tipo de personalidad de acuerdo a la muestra. No hay ninguna implicaci&oacute;n de alguna causa-efecto porque no hay forma de decir si la personalidad afecta la educaci&oacute;n o la educaci&oacute;n afecta la personalidad.</p>
+<p>Hacer un an&aacute;lisis de correspondencias de los datos dados e interpretar los resultados. </p> </li>
+<li><p>Obtener un mapa para los datos de las diferentes especies de flores iris.Los datos se pueden cargar con el comando <tt>data(iris)</tt></p> </li>
+</ol>
+<a class="onsite" href="announce.html"> Regresar</a>
+
+</body>
+
+</html>
+

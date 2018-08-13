@@ -1,0 +1,76 @@
+/* external CSS file */
+/* filename 'classes.css */
+/* Web based stat classes */
+
+h1
+{ margin-left: -8%; 
+  font-size: 200%; 
+  font-family: Palatino, serif;
+}
+     
+h1.title
+{ margin-bottom: 0em;
+}     
+
+
+H6.nav {
+   font-variant : small-caps; 
+   font-size : 100%; 
+   font-family : Verdana, Sans-serif; 
+}
+
+TABLE.datalinks {
+   font-size : 70%; 
+   font-family : Verdana, Sans-serif, Courier; 
+   color : green; 
+   background : white; 
+}
+
+H6 {
+   margin-left : -4%; 
+}
+
+H5 {
+   margin-left : -4%; 
+}
+
+H4 {
+   margin-left : -4%; 
+}
+
+H3 {
+   margin-left : -4%; 
+}
+
+H2.title {
+   margin-top : 0; 
+}
+
+H2 {
+   font-size: 150%; 
+   font-family: Palatino, "Times New Roman", Sans-serif; 
+   margin-top: 2em; 
+   margin-left: -4%; 
+}
+
+
+
+BODY {
+   color : black; 
+   margin-right : 10%; 
+   margin-left : 10%; 
+}
+
+
+A.onsite {
+   font-weight : bold; 
+   color : yellow;
+   background: blue; 
+}
+
+A.offsite {
+   font-weight: bold; 
+   font-family: Courier, Sans-serif; 
+   color: white;
+   background: red;
+}
