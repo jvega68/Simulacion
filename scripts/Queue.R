@@ -74,7 +74,7 @@ inicializa  <- function(lambdaA, lambdaS, n, Qlim){
   
   #inicializa la lista de eventos: el primer arribo y el tiempo de salida. Se asigna un tiempo de salida muy grande, ya que no hay
   #clientes esperando. Con esto se garantiza que el siguiente evento sea una llegada.
-  tiempo_sig_evento <<- c(reloj + rexp(1, lambdaA), 1e30)
+  tiempo_sig_evento <<- c(reloj + rexp(1, 1/lambdaA), 1e30)
   le <<- c(e=reloj,tipo=0,q=q_t)
 }
 
@@ -107,7 +107,7 @@ tiempo <- function(){
 
 
 llegadas <- function(){
-            tiempo_sig_evento[1] <<- reloj + rexp(1,lambdaA) #Programa un evento de llegada
+            tiempo_sig_evento[1] <<- reloj + rexp(1, 1/lambdaA) #Programa un evento de llegada
             if(servidor == 1){
               q_t <<- q_t + 1 #aumenta la cola en 1
               if (q_t > Qlim) warning(print(paste("Fila excede límite, al tiempo:",round(reloj,3),sep=" ")))
@@ -117,7 +117,7 @@ llegadas <- function(){
                   total_esperas <<- total_esperas + Di
                   clientes_enespera <<- clientes_enespera + 1
                   servidor <<- 1 
-                  tiempo_sig_evento[2] <<- reloj + rexp(1, lambdaS) #tiempo de salida
+                  tiempo_sig_evento[2] <<- reloj + rexp(1, 1/lambdaS) #tiempo de salida
               }
 }
 
@@ -132,7 +132,7 @@ salidas <- function(){
     Di <<- reloj - lt_A[1]
     total_esperas <<- total_esperas + Di
     clientes_enespera <<- clientes_enespera + 1
-    tiempo_sig_evento[2] <<- reloj + rexp(1, lambdaS)
+    tiempo_sig_evento[2] <<- reloj + rexp(1, 1/lambdaS)
     for(i in 1:q_t) lt_A[i] <<- lt_A[i+1]
   }
 }
