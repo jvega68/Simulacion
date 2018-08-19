@@ -8,14 +8,14 @@
 ## Variables consideradas:
 
 # En relación a los clientes:
-  # lambda_A = tiempo promedio de interarribo de los clientes. Es la media de la distribución de llegadas
+  # lambdaA  = tiempo promedio de interarribo de los clientes. Es la media de la distribución de llegadas
   # n        = número de clientes que entraran al sistema. Es fijado de antemano.
   # lt_A     = vector con los tiempos de arribo (de longitud Qlim)
   # Di        = tiempo de espera de un cliente en un momento dado
   # le       = lista de eventos con su tiempo y su tipo
 
 # En relación al servicio:
-  # lambda_S = tiempo promedio de servicio.
+  # lambdaS = tiempo promedio de servicio.
 
 # En relación a los indicadores del sistema
   # area_num_q           = area_num_in_q 
@@ -107,7 +107,7 @@ tiempo <- function(){
 
 
 llegadas <- function(){
-            tiempo_sig_evento[1] <<- reloj + rexp(1,lambda_A) #Programa un evento de llegada
+            tiempo_sig_evento[1] <<- reloj + rexp(1,lambdaA) #Programa un evento de llegada
             if(servidor == 1){
               q_t <<- q_t + 1 #aumenta la cola en 1
               if (q_t > Qlim) warning(print(paste("Fila excede límite, al tiempo:",round(reloj,3),sep=" ")))
