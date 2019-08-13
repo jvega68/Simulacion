@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Información inicial"
+title: "Mensaje inicial"
 date: 2019-08-13
 ---
 
