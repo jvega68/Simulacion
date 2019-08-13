@@ -1,2 +1,2 @@
 theme: jekyll-theme-minimal
-permalink: /blog/Simulacion/:year/:month/:day/:title
+permalink: /Simulacion/blog/:year/:month/:day/:title
